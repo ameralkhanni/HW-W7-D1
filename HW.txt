@@ -49,9 +49,9 @@ create table order_products(
 );
 
 insert into countries values ('1','Saudi','asia');
-insert into users values ('1','amer','amer@gmail.com','m','01/11/1999','2023-03-11');
-insert into orders values('1',23,'start', '2023-02-03');
-insert into products values('1', 'pc',2500,'valid', '2023-11-02');
+insert into users values ('1','amer','amer@gmail.com','m','01/11/1999','2022-01-23 12:45:56','123');
+insert into orders values('1',23,'start', '2022-01-23 12:45:56');
+insert into products values('1', 'pc',2500,'valid', '2022-01-23 12:45:56');
 insert into order_products values(1, 1, 1);
 update countries set name = 'Egypt' where code = '1';
 delete from products where id = '1';
