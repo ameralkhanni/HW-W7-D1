@@ -29,15 +29,6 @@ create table orders(
             created_at datetime,
             foreign key (user_id) references users(id)
 );
-
-create table order_products(
-
-     order_id int ,
-     product_id int,
-     quantity int default 0
-     foreign key (order_id) references orders(id)
-    foreign key (product_id) references products(id)
-);
 create table products(
 
     id int primary key ,
@@ -46,6 +37,15 @@ create table products(
     status varchar(10) check ( status in('valid','expired') ),
     created_at datetime
 
+);
+
+create table order_products(
+
+     order_id int ,
+     product_id int,
+     quantity int default 0,
+     foreign key (order_id) references orders(id),
+    foreign key (product_id) references products(id)
 );
 
 insert into countries values ('1','Saudi','asia');
